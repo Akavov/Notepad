@@ -40,7 +40,6 @@
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.helpButon = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutButton = new System.Windows.Forms.ToolStripMenuItem();
-            this.createNewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,7 +59,6 @@
             // файлToolStripMenuItem
             // 
             this.файлToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.createNewToolStripMenuItem,
             this.openFile,
             this.saveFile,
             this.closeFile});
@@ -80,6 +78,7 @@
             this.saveFile.Name = "saveFile";
             this.saveFile.Size = new System.Drawing.Size(152, 22);
             this.saveFile.Text = "&Сохранить";
+            this.saveFile.Click += new System.EventHandler(this.saveFile_Click);
             // 
             // closeFile
             // 
@@ -92,6 +91,7 @@
             this.clearRTB.Name = "clearRTB";
             this.clearRTB.Size = new System.Drawing.Size(71, 20);
             this.clearRTB.Text = "&Очистить";
+            this.clearRTB.Click += new System.EventHandler(this.clearRTB_Click);
             // 
             // TaskCLR
             // 
@@ -102,6 +102,11 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.Filter = "RTF files|*.rtf|Text files|*.txt|All files|*.*";
+            // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.Filter = "RTF files|*.rtf|Text files|*.txt|All files|*.*";
             // 
             // richTextBox1
             // 
@@ -125,13 +130,6 @@
             this.aboutButton.Name = "aboutButton";
             this.aboutButton.Size = new System.Drawing.Size(152, 22);
             this.aboutButton.Text = "&About";
-            // 
-            // createNewToolStripMenuItem
-            // 
-            this.createNewToolStripMenuItem.Name = "createNewToolStripMenuItem";
-            this.createNewToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.createNewToolStripMenuItem.Text = "Создать";
-            this.createNewToolStripMenuItem.Click += new System.EventHandler(this.createNewToolStripMenuItem_Click);
             // 
             // TextpadForm
             // 
@@ -164,7 +162,6 @@
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.ToolStripMenuItem helpButon;
         private System.Windows.Forms.ToolStripMenuItem aboutButton;
-        private System.Windows.Forms.ToolStripMenuItem createNewToolStripMenuItem;
     }
 }
 

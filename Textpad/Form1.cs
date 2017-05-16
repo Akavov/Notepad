@@ -33,6 +33,7 @@ namespace Textpad
                 }
                 catch (System.ArgumentException ex)
                 {
+                    
                     richTextBox1.LoadFile(openFileDialog1.FileName,
                        RichTextBoxStreamType.PlainText);
                 }
@@ -40,6 +41,22 @@ namespace Textpad
                 this.Text = "Файл [" + openFileDialog1.FileName + "]";
             }
         }
+
+        /// <summary>
+        /// Сохранение документа в новом файле
+        /// </summary>
+        private void MenuFileSaveAs()
+        {
+            if (saveFileDialog1.ShowDialog() ==
+               System.Windows.Forms.DialogResult.OK &&
+            saveFileDialog1.FileName.Length > 0)
+            {
+                richTextBox1.SaveFile(saveFileDialog1.FileName);
+                this.Text = "Файл [" + saveFileDialog1.FileName + "]";
+
+            }
+        }
+
 
         private void открытьToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -49,7 +66,17 @@ namespace Textpad
 
         private void createNewToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void clearRTB_Click(object sender, EventArgs e)
+        {
             richTextBox1.Clear();
+        }
+
+        private void saveFile_Click(object sender, EventArgs e)
+        {
+            MenuFileSaveAs();
         }
     }
 }
