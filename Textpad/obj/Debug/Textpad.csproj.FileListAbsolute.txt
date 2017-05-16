@@ -1,0 +1,9 @@
+C:\Users\Ars\Documents\Visual Studio 2017\Projects\Textpad\Textpad\bin\Debug\Textpad.exe.config
+C:\Users\Ars\Documents\Visual Studio 2017\Projects\Textpad\Textpad\bin\Debug\Textpad.exe
+C:\Users\Ars\Documents\Visual Studio 2017\Projects\Textpad\Textpad\bin\Debug\Textpad.pdb
+C:\Users\Ars\Documents\Visual Studio 2017\Projects\Textpad\Textpad\obj\Debug\Textpad.csprojResolveAssemblyReference.cache
+C:\Users\Ars\Documents\Visual Studio 2017\Projects\Textpad\Textpad\obj\Debug\Textpad.TextpadForm.resources
+C:\Users\Ars\Documents\Visual Studio 2017\Projects\Textpad\Textpad\obj\Debug\Textpad.Properties.Resources.resources
+C:\Users\Ars\Documents\Visual Studio 2017\Projects\Textpad\Textpad\obj\Debug\Textpad.csproj.GenerateResource.Cache
+C:\Users\Ars\Documents\Visual Studio 2017\Projects\Textpad\Textpad\obj\Debug\Textpad.exe
+C:\Users\Ars\Documents\Visual Studio 2017\Projects\Textpad\Textpad\obj\Debug\Textpad.pdb
