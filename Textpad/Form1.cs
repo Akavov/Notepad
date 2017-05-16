@@ -17,10 +17,39 @@ namespace Textpad
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Открытие существующего файла
+        /// </summary>
+        private void MenuFileOpen()
+        {
+            if (openFileDialog1.ShowDialog() ==
+               System.Windows.Forms.DialogResult.OK &&
+               openFileDialog1.FileName.Length > 0)
+            {
+                try
+                {
+                    richTextBox1.LoadFile(openFileDialog1.FileName,
+                       RichTextBoxStreamType.RichText);
+                }
+                catch (System.ArgumentException ex)
+                {
+                    richTextBox1.LoadFile(openFileDialog1.FileName,
+                       RichTextBoxStreamType.PlainText);
+                }
+
+                this.Text = "Файл [" + openFileDialog1.FileName + "]";
+            }
+        }
+
         private void открытьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            MenuFileOpen();
             
+        }
+
+        private void createNewToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Clear();
         }
     }
 }
