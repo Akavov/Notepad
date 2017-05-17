@@ -35,11 +35,13 @@
             this.closeFile = new System.Windows.Forms.ToolStripMenuItem();
             this.clearRTB = new System.Windows.Forms.ToolStripMenuItem();
             this.TaskCLR = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpButon = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutButton = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.helpButon = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutButton = new System.Windows.Forms.ToolStripMenuItem();
+            this.averageGradeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fmenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,21 +71,21 @@
             // openFile
             // 
             this.openFile.Name = "openFile";
-            this.openFile.Size = new System.Drawing.Size(152, 22);
+            this.openFile.Size = new System.Drawing.Size(132, 22);
             this.openFile.Text = "&Открыть";
             this.openFile.Click += new System.EventHandler(this.открытьToolStripMenuItem_Click);
             // 
             // saveFile
             // 
             this.saveFile.Name = "saveFile";
-            this.saveFile.Size = new System.Drawing.Size(152, 22);
+            this.saveFile.Size = new System.Drawing.Size(132, 22);
             this.saveFile.Text = "&Сохранить";
             this.saveFile.Click += new System.EventHandler(this.saveFile_Click);
             // 
             // closeFile
             // 
             this.closeFile.Name = "closeFile";
-            this.closeFile.Size = new System.Drawing.Size(152, 22);
+            this.closeFile.Size = new System.Drawing.Size(132, 22);
             this.closeFile.Text = "&Закрыть";
             // 
             // clearRTB
@@ -95,9 +97,26 @@
             // 
             // TaskCLR
             // 
+            this.TaskCLR.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.averageGradeToolStripMenuItem,
+            this.fmenToolStripMenuItem});
             this.TaskCLR.Name = "TaskCLR";
             this.TaskCLR.Size = new System.Drawing.Size(64, 20);
             this.TaskCLR.Text = "&Задание";
+            // 
+            // helpButon
+            // 
+            this.helpButon.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutButton});
+            this.helpButon.Name = "helpButon";
+            this.helpButon.Size = new System.Drawing.Size(44, 20);
+            this.helpButon.Text = "&Help";
+            // 
+            // aboutButton
+            // 
+            this.aboutButton.Name = "aboutButton";
+            this.aboutButton.Size = new System.Drawing.Size(107, 22);
+            this.aboutButton.Text = "&About";
             // 
             // openFileDialog1
             // 
@@ -116,20 +135,21 @@
             this.richTextBox1.Size = new System.Drawing.Size(559, 328);
             this.richTextBox1.TabIndex = 1;
             this.richTextBox1.Text = "";
+            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
-            // helpButon
+            // averageGradeToolStripMenuItem
             // 
-            this.helpButon.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aboutButton});
-            this.helpButon.Name = "helpButon";
-            this.helpButon.Size = new System.Drawing.Size(44, 20);
-            this.helpButon.Text = "&Help";
+            this.averageGradeToolStripMenuItem.Name = "averageGradeToolStripMenuItem";
+            this.averageGradeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.averageGradeToolStripMenuItem.Text = "Средний балл";
+            this.averageGradeToolStripMenuItem.Click += new System.EventHandler(this.averageGradeToolStripMenuItem_Click);
             // 
-            // aboutButton
+            // fmenToolStripMenuItem
             // 
-            this.aboutButton.Name = "aboutButton";
-            this.aboutButton.Size = new System.Drawing.Size(152, 22);
-            this.aboutButton.Text = "&About";
+            this.fmenToolStripMenuItem.Name = "fmenToolStripMenuItem";
+            this.fmenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.fmenToolStripMenuItem.Text = "Должники";
+            this.fmenToolStripMenuItem.Click += new System.EventHandler(this.fmenToolStripMenuItem_Click);
             // 
             // TextpadForm
             // 
@@ -162,6 +182,8 @@
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.ToolStripMenuItem helpButon;
         private System.Windows.Forms.ToolStripMenuItem aboutButton;
+        private System.Windows.Forms.ToolStripMenuItem averageGradeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fmenToolStripMenuItem;
     }
 }
 
