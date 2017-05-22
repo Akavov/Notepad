@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,6 +19,7 @@ namespace Textpad
         public TextpadForm()
         {
             InitializeComponent();
+
         }
 
         /// <summary>
@@ -105,6 +107,37 @@ namespace Textpad
             Form2 form2 = new Form2();
             form2.Show();
         }
+
+        private void открытьToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            string path = "states.dat";
+            try { 
+            using (BinaryReader reader = new BinaryReader(File.Open(path, FileMode.Open)))
+            {
+                // пока не достигнут конец файла
+                // считываем каждое значение из файла
+                while (reader.PeekChar() > -1)
+                {
+                    string name = reader.ReadString();
+                    string capital = reader.ReadString();
+                    int area = reader.ReadInt32();
+                    double population = reader.ReadDouble();
+
+                        this.richTextBox1.Text = "Страна: " + name + " столица: " + capital + " площадь " + area + " кв. км,   численность населения: " + population + " млн. чел.";
+                      
+                }
+            }
+        }
+        catch (Exception ee)
+        {
+            Console.WriteLine(ee.Message);
+        }
+}
+
+        private void closeFile_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
     public class Student
     {
@@ -141,6 +174,21 @@ namespace Textpad
         public int getSG() { return secondGrade; }
         public int getTG() { return thirdGrade; }
 
+    }
+    struct State
+    {
+        public string name;
+        public string capital;
+        public int area;
+        public double people;
+
+        public State(string n, string c, int a, double p)
+        {
+            name = n;
+            capital = c;
+            people = p;
+            area = a;
+        }
     }
     public class FileNameNotFoundException : ApplicationException
     {

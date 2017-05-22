@@ -35,13 +35,15 @@
             this.closeFile = new System.Windows.Forms.ToolStripMenuItem();
             this.clearRTB = new System.Windows.Forms.ToolStripMenuItem();
             this.TaskCLR = new System.Windows.Forms.ToolStripMenuItem();
+            this.averageGradeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fmenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpButon = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutButton = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.averageGradeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.fmenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.бинарныеФайлыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.открытьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,6 +53,7 @@
             this.файлToolStripMenuItem,
             this.clearRTB,
             this.TaskCLR,
+            this.бинарныеФайлыToolStripMenuItem,
             this.helpButon});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -85,8 +88,9 @@
             // closeFile
             // 
             this.closeFile.Name = "closeFile";
-            this.closeFile.Size = new System.Drawing.Size(132, 22);
+            this.closeFile.Size = new System.Drawing.Size(152, 22);
             this.closeFile.Text = "&Закрыть";
+            this.closeFile.Click += new System.EventHandler(this.closeFile_Click);
             // 
             // clearRTB
             // 
@@ -104,6 +108,20 @@
             this.TaskCLR.Size = new System.Drawing.Size(64, 20);
             this.TaskCLR.Text = "&Задание";
             // 
+            // averageGradeToolStripMenuItem
+            // 
+            this.averageGradeToolStripMenuItem.Name = "averageGradeToolStripMenuItem";
+            this.averageGradeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.averageGradeToolStripMenuItem.Text = "Средний балл";
+            this.averageGradeToolStripMenuItem.Click += new System.EventHandler(this.averageGradeToolStripMenuItem_Click);
+            // 
+            // fmenToolStripMenuItem
+            // 
+            this.fmenToolStripMenuItem.Name = "fmenToolStripMenuItem";
+            this.fmenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.fmenToolStripMenuItem.Text = "Должники";
+            this.fmenToolStripMenuItem.Click += new System.EventHandler(this.fmenToolStripMenuItem_Click);
+            // 
             // helpButon
             // 
             this.helpButon.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -115,7 +133,7 @@
             // aboutButton
             // 
             this.aboutButton.Name = "aboutButton";
-            this.aboutButton.Size = new System.Drawing.Size(107, 22);
+            this.aboutButton.Size = new System.Drawing.Size(152, 22);
             this.aboutButton.Text = "&About";
             // 
             // openFileDialog1
@@ -137,19 +155,20 @@
             this.richTextBox1.Text = "";
             this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
-            // averageGradeToolStripMenuItem
+            // бинарныеФайлыToolStripMenuItem
             // 
-            this.averageGradeToolStripMenuItem.Name = "averageGradeToolStripMenuItem";
-            this.averageGradeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.averageGradeToolStripMenuItem.Text = "Средний балл";
-            this.averageGradeToolStripMenuItem.Click += new System.EventHandler(this.averageGradeToolStripMenuItem_Click);
+            this.бинарныеФайлыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.открытьToolStripMenuItem});
+            this.бинарныеФайлыToolStripMenuItem.Name = "бинарныеФайлыToolStripMenuItem";
+            this.бинарныеФайлыToolStripMenuItem.Size = new System.Drawing.Size(116, 20);
+            this.бинарныеФайлыToolStripMenuItem.Text = "Бинарные файлы";
             // 
-            // fmenToolStripMenuItem
+            // открытьToolStripMenuItem
             // 
-            this.fmenToolStripMenuItem.Name = "fmenToolStripMenuItem";
-            this.fmenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.fmenToolStripMenuItem.Text = "Должники";
-            this.fmenToolStripMenuItem.Click += new System.EventHandler(this.fmenToolStripMenuItem_Click);
+            this.открытьToolStripMenuItem.Name = "открытьToolStripMenuItem";
+            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.открытьToolStripMenuItem.Text = "&Открыть";
+            this.открытьToolStripMenuItem.Click += new System.EventHandler(this.открытьToolStripMenuItem_Click_1);
             // 
             // TextpadForm
             // 
@@ -184,6 +203,8 @@
         private System.Windows.Forms.ToolStripMenuItem aboutButton;
         private System.Windows.Forms.ToolStripMenuItem averageGradeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fmenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem бинарныеФайлыToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem открытьToolStripMenuItem;
     }
 }
 
